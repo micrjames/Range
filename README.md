@@ -47,7 +47,7 @@ range.value
 
 At this point, the code is viewed to be completed.
 ## Room for Improvement
-
+The project works as it should, so the only improvement is if there are changes to Typescript.
 ## Contact
 
 Feel free to contact me @michaelrjamesjr on twitter.
