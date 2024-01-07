@@ -1,12 +1,22 @@
-const range = (end, start=0, step=1) => {
-	function *generateRange() {
-	   let x = start - step;
-	   while(x < end - step) yield x += step;
-	}
+export class Range implements Iterable<number> {
+   private startPoint: number;
+   private endPoint: number;
+   private step: number;
 
-    return {
-	   [Symbol.iterator]: generateRange
-	};
+   constructor(end: number, start=0, step=1) {
+	  this.startPoint = start - step;
+	  this.endPoint = end;
+	  this.step = step;
+   }
+
+   // Symbol.iterator makes an iterator
+   // * makes it a generator
+   *[Symbol.iterator](): IterableIterator<number> {
+	  while(this.startPoint < this.endPoint - this.step)
+		 // yield a value
+		 yield this.startPoint += this.step; 
+   }
 };
 
-exports.range = range;
+// .next()
+// .value

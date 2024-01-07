@@ -1,8 +1,14 @@
-const { range } = require("../range");
+const { Range } = require("../Range");
 
-const nums = [...range(5)];
 describe("Range operator.", () => {
-   test.todo("Should be a sequence of 5 numbers.");
-   test.todo("Should output a sequence of the first 5 numbers.");
+   const rangeSize = 5;
+   const range = new Range(rangeSize);
+   const nums: number[] = [...range];
+   test("Should be a sequence of 5 numbers.", () => {
+	  expect(nums).toHaveLength(rangeSize);
+   });
+   test("Should output a sequence of the first 5 numbers.", () => {
+	  expect(nums).toEqual([0, 1, 2, 3, 4]);
+   });
 });
 
