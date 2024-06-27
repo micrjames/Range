@@ -34,7 +34,7 @@ Instantiate an instance of the Range class.
 ```
 const range = new Range(rangeSize);
 ```
-Can use the spread operator (...) on the instance created above, or
+This instantiation provides a range of [start, end). That is, values inclusive of the starting value and exclusive of the ending valu. Can use the spread operator (...) on the instance created above, or
 ```
 const nums: number[] = [...range];
 ```
