@@ -1,4 +1,4 @@
-const { Range } = require("../Range");
+import { Range } from "../Range";
 
 describe("Range operator.", () => {
    const rangeSize = 5;
